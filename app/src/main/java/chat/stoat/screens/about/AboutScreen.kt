@@ -121,7 +121,7 @@ fun AboutScreen(navController: NavController, viewModel: AboutViewModel = viewMo
                 horizontalAlignment = Alignment.CenterHorizontally
             ) {
                 Image(
-                    painter = painterResource(R.drawable.stoat_logo_white),
+                    painter = painterResource(R.drawable.tailstalk_icon),
                     contentDescription = stringResource(R.string.about_full_name),
                     colorFilter = ColorFilter.tint(LocalContentColor.current),
                     modifier = Modifier

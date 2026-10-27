@@ -99,7 +99,7 @@ private fun LeadPart(windowSizeClass: WindowSizeClass) {
             Spacer(Modifier.height(64.dp))
         }
         Image(
-            painter = painterResource(R.drawable.stoat_logo_white),
+            painter = painterResource(R.drawable.tailstalk_icon),
             contentDescription = null,
             colorFilter = ColorFilter.tint(
                 MaterialTheme.colorScheme.onBackground
@@ -115,7 +115,7 @@ private fun LeadPart(windowSizeClass: WindowSizeClass) {
         )
         Spacer(modifier = Modifier.height(16.dp))
         Text(
-            "Stoat is the chat app that’s truly built with you in mind.", // FIXME hardcoded string
+            "TailsTalk 2 is the chat app that’s truly built with you in mind.", // FIXME hardcoded string
             style = MaterialTheme.typography.bodyLarge,
             fontSize = 18.sp,
             textAlign = TextAlign.Center

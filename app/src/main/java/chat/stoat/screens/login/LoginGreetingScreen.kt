@@ -71,9 +71,9 @@ fun LoginGreetingScreen(navController: NavController) {
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
             Image(
-                painter = painterResource(id = R.drawable.stoat_logo_white),
+                painter = painterResource(id = R.drawable.tailstalk_icon),
                 colorFilter = ColorFilter.tint(LocalContentColor.current),
-                contentDescription = "Stoat",
+                contentDescription = "TailsTalk 2",
                 contentScale = ContentScale.Fit,
                 modifier = Modifier
                     .height(100.dp)

@@ -94,7 +94,7 @@ fun NewLoginExperienceMockup(navController: NavController) {
                     ) {
                         Spacer(modifier = Modifier.height(64.dp))
                         Image(
-                            painter = painterResource(R.drawable.stoat_wordmark_white),
+                            painter = painterResource(R.drawable.tailstalk_icon),
                             contentDescription = null,
                             colorFilter = if (LoadedSettings.theme == Theme.M3Dynamic) ColorFilter.tint(
                                 MaterialTheme.colorScheme.onBackground
