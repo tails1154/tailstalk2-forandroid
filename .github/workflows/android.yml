@@ -40,7 +40,7 @@ jobs:
         run: ./gradlew --no-daemon assembleDebug
 
       - name: Archive debug APK
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: debug-apk
           retention-days: 5
