@@ -100,7 +100,9 @@ data class Bot(
 @Parcelize
 data class Profile(
     val content: String? = null,
-    val background: AutumnResource? = null
+    val background: AutumnResource? = null,
+    @SerialName("avatar_decoration")
+    val avatarDecoration: String? = null
 ) : Parcelable
 
 @Serializable

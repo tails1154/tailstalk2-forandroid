@@ -67,7 +67,7 @@ fun String.api(): String {
 }
 
 fun buildUserAgent(accessMethod: String = "Ktor"): String {
-    return "$accessMethod StoatForAndroid/${BuildConfig.VERSION_NAME} " +
+    return "$accessMethod TailsTalk2ForAndroid/${BuildConfig.VERSION_NAME} " +
             "${BuildConfig.APPLICATION_ID} Android/${android.os.Build.VERSION.SDK_INT} " +
             "(${android.os.Build.MANUFACTURER} ${android.os.Build.DEVICE}) Kotlin/${KotlinVersion.CURRENT}"
 }

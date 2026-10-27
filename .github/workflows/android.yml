@@ -2,12 +2,11 @@ name: Android CI
 
 on:
   push:
-    branches: [ "dev" ]
+    branches: [ "main", "dev" ]
+  workflow_dispatch:
 
 jobs:
   build:
-    if: ${{ false }} # at the moment this simply wastes our minutes, we will enable it when we have unit tests etc.
-
     runs-on: ubuntu-latest
 
     env:
@@ -36,6 +35,8 @@ jobs:
         run: chmod +x gradlew
 
       - name: Build with Gradle
+        env:
+          RVX_DEBUG_APP_NAME: TailsTalk 2
         run: ./gradlew --no-daemon assembleDebug
 
       - name: Archive debug APK
