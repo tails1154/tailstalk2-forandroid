@@ -35,6 +35,10 @@ jobs:
 
       - name: Grant execute permission for gradlew
         run: chmod +x gradlew
+      - name: Provide dummy Firebase config for CI
+        run: |
+          cp app/google-services.json.example app/google-services.json
+          sed -i 's/chat\.revolt\.debug/com\.tails1154\.tailstalk2/g; s/chat\.revolt/com\.tails1154\.tailstalk2/g' app/google-services.json
 
       - name: Build with Gradle
         env:
