@@ -35,10 +35,15 @@ jobs:
 
       - name: Grant execute permission for gradlew
         run: chmod +x gradlew
-      - name: Provide dummy Firebase config for CI
+      - name: Provide Firebase config for CI
+        env:
+          GOOGLE_SERVICES_JSON_B64: ${{ secrets.GOOGLE_SERVICES_JSON_B64 }}
         run: |
-          cp app/google-services.json.example app/google-services.json
-          sed -i 's/chat\.revolt\.debug/com\.tails1154\.tailstalk2/g; s/chat\.revolt/com\.tails1154\.tailstalk2/g' app/google-services.json
+          if [ -n "$GOOGLE_SERVICES_JSON_B64" ]; then
+            printf '%s' "$GOOGLE_SERVICES_JSON_B64" | base64 --decode > app/google-services.json
+          else
+            cp app/google-services.json.example app/google-services.json
+          fi
 
       - name: Build with Gradle
         env:
