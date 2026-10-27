@@ -63,8 +63,8 @@ android {
         applicationId = "com.tails1154.tailstalk2"
         minSdk = libs.versions.minSdk.get().toInt()
         targetSdk = libs.versions.targetSdk.get().toInt()
-        versionCode = Integer.parseInt("001_007_002".replace("_", ""), 10)
-        versionName = "1.7.2"
+        versionCode = Integer.parseInt("001_000_000".replace("_", ""), 10)
+        versionName = "1.0.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         vectorDrawables {
