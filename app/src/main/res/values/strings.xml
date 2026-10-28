@@ -110,10 +110,16 @@
     <string name="about_section_debug_information_description">If you\'re experiencing issues with the app, this information may be helpful to include when contacting support or submitting a bug report.</string>
     <string name="about_section_debug_information_copy_as_json">Copy as JSON</string>
     <string name="about_section_oss_licenses">Open Source Licenses</string>
+    <string name="about_tab_details">Details</string>
+    <string name="about_tab_version">Version</string>
 
     <string name="oss_attribution">OSS Licenses</string>
     <string name="oss_attribution_tap_to_view_license">Tap to view license</string>
     <string name="oss_attribution_open_library_website">Open library website</string>
+    <string name="oss_attribution_body">TailsTalk 2 was built with help from these open-source projects.</string>
+    <string name="oss_attribution_body_2">We thank the developers of these projects for making their work available.</string>
+    <string name="oss_attribution_generation_date">Last updated: %1$s</string>
+    <string name="oss_attribution_warning">This list is generated automatically and may be incomplete or inaccurate.</string>
 
     <string name="comingsoon_toast">Sorry, this feature is not ready yet.</string>
 
@@ -178,6 +184,8 @@
     <string name="overview_screen_catch_up">Catch Up</string>
     <string name="overview_screen_catch_up_description">See what you\'ve missed while you were away</string>
     <string name="overview_screen_catch_up_none">All caught up</string>
+    <string name="overview_screen_feedback">Send feedback</string>
+    <string name="overview_screen_feedback_description">Have something to say? We’re listening.</string>
     <string name="overview_screen_catch_up_none_description">You\'ve seen all new messages since your last visit.</string>
     <string name="overview_screen_catch_up_amount_badge_loading">…</string>
 
@@ -926,6 +934,11 @@
     <string name="settings_feedback_description">Join the TailsTalk 2 server to give feedback or suggestions and report bugs.</string>
 
     <string name="settings_changelog">What\'s New</string>
+    <string name="settings_changelogs">Changelogs</string>
+    <string name="settings_changelogs_new_header">What we’ve been working on ✨</string>
+    <string name="settings_changelogs_historical_version_header">Changelog for %1$s</string>
+    <string name="settings_changelogs_historical_version_header_placeholder">that version</string>
+    <string name="settings_appearance_theme_revolt">TailsTalk 2</string>
 
     <string name="settings_language">Language</string>
     <string name="settings_language_auto">System default</string>
