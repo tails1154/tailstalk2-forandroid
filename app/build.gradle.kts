@@ -63,8 +63,8 @@ android {
         applicationId = "com.tails1154.tailstalk2"
         minSdk = libs.versions.minSdk.get().toInt()
         targetSdk = libs.versions.targetSdk.get().toInt()
-        versionCode = Integer.parseInt("001_000_000".replace("_", ""), 10)
-        versionName = "1.0.0"
+        versionCode = Integer.parseInt("001_000_001".replace("_", ""), 10)
+        versionName = "1.0.1"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         vectorDrawables {
@@ -72,8 +72,20 @@ android {
         }
     }
 
+    signingConfigs {
+        create("release") {
+            val keystorePath = System.getenv("TAILSTALK_RELEASE_KEYSTORE")
+                ?: "${rootProject.projectDir}/ci-release.keystore"
+            storeFile = file(keystorePath)
+            storePassword = System.getenv("TAILSTALK_RELEASE_STORE_PASSWORD") ?: "tails-talk-ci"
+            keyAlias = System.getenv("TAILSTALK_RELEASE_KEY_ALIAS") ?: "tailstalk-ci"
+            keyPassword = System.getenv("TAILSTALK_RELEASE_KEY_PASSWORD") ?: "tails-talk-ci"
+        }
+    }
+
     buildTypes {
         release {
+            signingConfig = signingConfigs.getByName("release")
             isMinifyEnabled = true
             isShrinkResources = true
             proguardFiles(
