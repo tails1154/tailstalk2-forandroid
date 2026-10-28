@@ -63,8 +63,8 @@ android {
         applicationId = "com.tails1154.tailstalk2"
         minSdk = libs.versions.minSdk.get().toInt()
         targetSdk = libs.versions.targetSdk.get().toInt()
-        versionCode = Integer.parseInt("001_000_004".replace("_", ""), 10)
-        versionName = "1.0.4"
+        versionCode = Integer.parseInt("001_000_005".replace("_", ""), 10)
+        versionName = "1.0.5"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         vectorDrawables {
@@ -86,9 +86,9 @@ android {
     buildTypes {
         release {
             signingConfig = signingConfigs.getByName("release")
-            // Keep release builds quick and debuggable; shrinking is not required for signing or distribution.
-            isMinifyEnabled = false
-            isShrinkResources = false
+            // Production builds must be shrunk and obfuscated for Play visibility and size.
+            isMinifyEnabled = true
+            isShrinkResources = true
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
