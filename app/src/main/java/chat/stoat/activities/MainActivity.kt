@@ -370,9 +370,10 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        if (BuildConfig.SENTRY_DSN.isNotBlank() && BuildConfig.SENTRY_DSN != "null") {
+        val sentryDsn = BuildConfig.SENTRY_DSN
+        if (!sentryDsn.isNullOrBlank() && sentryDsn != "null") {
             SentryAndroid.init(this) { options ->
-                options.dsn = BuildConfig.SENTRY_DSN
+                options.dsn = sentryDsn
                 options.release = BuildConfig.VERSION_NAME
             }
         }
