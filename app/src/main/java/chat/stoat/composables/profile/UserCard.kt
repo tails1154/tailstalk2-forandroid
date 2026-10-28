@@ -202,15 +202,14 @@ fun UserCard(
             ) {
                 val (heading, nameLabel, name, usernameLabel, username, joinDateLabel, joinDate, qrLabel, qr, photoLabel, photo, url) = createRefs()
 
-                Image(
-                    painter = painterResource(R.drawable.usercard_heading),
-                    contentDescription = null,
-                    modifier = Modifier
-                        .fillMaxWidth(0.5f)
-                        .constrainAs(heading) {
-                            top.linkTo(parent.top)
-                            start.linkTo(parent.start)
-                        }
+                Text(
+                    text = "TailsTalk 2",
+                    fontSize = 18.sp,
+                    fontWeight = FontWeight.Bold,
+                    modifier = Modifier.constrainAs(heading) {
+                        top.linkTo(parent.top)
+                        start.linkTo(parent.start)
+                    }
                 )
 
                 Text(

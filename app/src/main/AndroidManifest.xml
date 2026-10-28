@@ -33,7 +33,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:name=".StoatApplication"
-        android:theme="@style/Theme.Stoat"
+        android:theme="@style/Theme.TailsTalk2"
         android:enableOnBackInvokedCallback="true"
         tools:targetApi="tiramisu">
         <provider
@@ -75,7 +75,7 @@
             android:exported="true"
             android:configChanges="orientation|screenSize|colorMode"
             android:windowSoftInputMode="adjustResize"
-            android:theme="@style/Theme.Stoat">
+            android:theme="@style/Theme.TailsTalk2">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -99,9 +99,9 @@
 
         <activity
             android:name=".activities.InviteActivity"
-            android:theme="@style/Theme.Stoat"
+            android:theme="@style/Theme.TailsTalk2"
             android:exported="true">
-            <!-- Revolt invite links -->
+            <!-- TailsTalk 2 invite links -->
             <intent-filter android:autoVerify="true">
                 <action android:name="android.intent.action.VIEW" />
 
@@ -132,7 +132,7 @@
                     <data android:pathPrefix="/discover/" />
                 </uri-relative-filter-group>
             </intent-filter>
-            <!-- Stoat invite links -->
+            <!-- TailsTalk 2 discover links -->
             <intent-filter android:autoVerify="true">
                 <action android:name="android.intent.action.VIEW" />
 
@@ -167,7 +167,7 @@
 
         <activity
             android:name=".activities.ShareTargetActivity"
-            android:theme="@style/Theme.Stoat"
+            android:theme="@style/Theme.TailsTalk2"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.SEND" />
@@ -183,17 +183,17 @@
 
         <activity
             android:name=".activities.media.ImageViewActivity"
-            android:theme="@style/Theme.Stoat" />
+            android:theme="@style/Theme.TailsTalk2" />
 
         <activity
             android:name=".activities.media.VideoViewActivity"
             android:configChanges="orientation|screenSize"
-            android:theme="@style/Theme.Stoat" />
+            android:theme="@style/Theme.TailsTalk2" />
 
         <activity
             android:name=".activities.voice.IncomingActivity"
             android:configChanges="orientation|screenSize"
-            android:theme="@style/Theme.Stoat" />
+            android:theme="@style/Theme.TailsTalk2" />
 
         <!-- Backport photo picker via Google Play Services -->
         <service

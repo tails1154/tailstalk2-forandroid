@@ -63,8 +63,8 @@ android {
         applicationId = "com.tails1154.tailstalk2"
         minSdk = libs.versions.minSdk.get().toInt()
         targetSdk = libs.versions.targetSdk.get().toInt()
-        versionCode = Integer.parseInt("001_000_001".replace("_", ""), 10)
-        versionName = "1.0.1"
+        versionCode = Integer.parseInt("001_000_002".replace("_", ""), 10)
+        versionName = "1.0.2"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         vectorDrawables {
@@ -95,7 +95,7 @@ android {
             buildConfigField(
                 "String",
                 "SENTRY_DSN",
-                "\"${buildproperty("sentry.dsn", "RVX_SENTRY_DSN")}\""
+                buildproperty("sentry.dsn", "RVX_SENTRY_DSN")?.let { "\"$it\"" } ?: "null"
             )
             buildConfigField(
                 "String",
@@ -117,7 +117,7 @@ android {
             buildConfigField(
                 "String",
                 "SENTRY_DSN",
-                "\"${buildproperty("sentry.dsn", "RVX_SENTRY_DSN")}\""
+                buildproperty("sentry.dsn", "RVX_SENTRY_DSN")?.let { "\"$it\"" } ?: "null"
             )
             buildConfigField(
                 "String",

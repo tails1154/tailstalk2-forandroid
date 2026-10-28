@@ -114,7 +114,7 @@ fun ColumnScope.DiscoverView() {
                                 return true
                             }
 
-                            if (!request?.url?.host.equals("rvlt.gg")) {
+                            if (!request?.url?.host.equals("tailstalk2.com")) {
                                 return true
                             }
 
