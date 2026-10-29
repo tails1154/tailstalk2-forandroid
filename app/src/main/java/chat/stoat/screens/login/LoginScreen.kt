@@ -294,14 +294,6 @@ fun LoginScreen(navController: NavController, viewModel: LoginViewModel = koinVi
                 .fillMaxWidth(),
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
-            Weblink(
-                text = stringResource(R.string.resend_verification),
-                url = "$STOAT_WEB_APP/login/resend",
-                modifier = Modifier
-                    .padding(vertical = 7.dp)
-                    .testTag("resend_verification_link")
-            )
-
             Spacer(modifier = Modifier.height(10.dp))
 
             Row {

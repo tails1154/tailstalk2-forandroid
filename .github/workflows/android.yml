@@ -71,7 +71,7 @@ jobs:
       - name: Archive release APK and AAB
         uses: actions/upload-artifact@v4
         with:
-          name: release-android-1.0.4
+          name: release-android-1.0.6
           retention-days: 5
           path: |
             app/build/outputs/apk/release/app-release.apk
